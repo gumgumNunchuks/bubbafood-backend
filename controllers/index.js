@@ -1,15 +1,21 @@
+const test = require('./test')
 const user = require('./user')
 const brand = require('./brand')
 const menu = require('./menu')
 const restaurant = require('./restaurant')
-const order = require('./order.js')
-const comment = require('./comment')
+const comment=require('./comment')
+const ordercomment=require('./ordercomment')
+const rewards=require('./rewards')
+const orders = require('./order.js')
 
 module.exports = {
-    ...order,
+    ...test,
     ...user,
     ...brand,
     ...menu,
     ...restaurant,
-    ...comment
+    ...comment,
+    ...ordercomment,
+    ...rewards,
+    ...orders
 }

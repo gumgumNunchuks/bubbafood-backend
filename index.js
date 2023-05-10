@@ -1,5 +1,5 @@
 const router = require('./routes')
-const adrouter = require('./Ads/routs')
+const adRouter = require('./Ads/')
 const express = require('express')
 const cors = require('cors')
 const { sf, conn } = require('./salesforce')
@@ -10,10 +10,10 @@ const chalk = require('chalk')
 const app = express()
 
 app.use(cors())
-app.use(logger)
 app.use(express.json())
-app.use('/', router)
-app.use('/ads',adrouter)
+app.use(logger)
+app.use('/api', router)
+app.use('/ads', adRouter)
 
 sf.
     then((userinfo) => {
